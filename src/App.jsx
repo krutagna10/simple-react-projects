@@ -1,11 +1,11 @@
-import Counter from "./1 - Counter/Counter.jsx";
+import TodoApp from "./2 - Todo List/TodoApp.jsx";
 
 function App() {
   return (
     <div className="app">
-      <Counter />
+      <TodoApp />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
