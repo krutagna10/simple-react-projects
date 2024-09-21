@@ -1,7 +1,9 @@
+import Counter from "./1 - Counter/Counter.jsx";
+
 function App() {
   return (
-    <div>
-      <h1>React Projects</h1>
+    <div className="app">
+      <Counter />
     </div>
   )
 }
