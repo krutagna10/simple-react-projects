@@ -1,6 +1,10 @@
 import TodoItem from "../TodoItem/TodoItem.jsx";
+import { useContext } from "react";
+import TodosContext from "../../context/TodosContext.jsx";
 
-function TodoList({ todos, onDeleteTodo, onEditTodo }) {
+function TodoList() {
+  const { todos } = useContext(TodosContext);
+
   return (
     <table>
       <thead>
@@ -13,13 +17,7 @@ function TodoList({ todos, onDeleteTodo, onEditTodo }) {
       </thead>
       <tbody>
         {todos.map((todo, index) => (
-          <TodoItem
-            key={todo.id}
-            index={index}
-            todo={todo}
-            onDeleteTodo={onDeleteTodo}
-            onEditTodo={onEditTodo}
-          />
+          <TodoItem key={todo.id} index={index} todo={todo} />
         ))}
       </tbody>
     </table>

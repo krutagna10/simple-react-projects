@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import TodosContext from "../../context/TodosContext.jsx";
 
-function TodoItem({ index, todo, onDeleteTodo, onEditTodo }) {
+function TodoItem({ index, todo }) {
+  const { onDeleteTodo, onEditTodo } = useContext(TodosContext);
+
   function handleIsCompletedChange(event) {
     const updatedTodo = {
       ...todo,

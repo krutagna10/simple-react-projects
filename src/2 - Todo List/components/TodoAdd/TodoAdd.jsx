@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import TodosContext from "../../context/TodosContext.jsx";
 
-function TodoAdd({ onAddTodo }) {
+function TodoAdd() {
+  const { onAddTodo } = useContext(TodosContext);
   const [title, setTitle] = useState("");
 
   function handleTitleChange(event) {
