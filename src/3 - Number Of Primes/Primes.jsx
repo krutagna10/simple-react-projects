@@ -1,10 +1,7 @@
-import Primes from "./3 - Number Of Primes/Primes.jsx";
 import { useState } from "react";
 
-function App() {
+function Primes() {
   const [primeCount, setPrimeCount] = useState("");
-
-  console.log("Before function: " + primeCount);
 
   function handlePrimeCountChange(event) {
     setPrimeCount(event.target.value);
@@ -14,7 +11,7 @@ function App() {
   console.log("After function: " + primeCount);
 
   return (
-    <div className="app">
+    <div>
       <h1>Prime Number</h1>
       <div>
         <input
@@ -29,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default Primes;
